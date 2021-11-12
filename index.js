@@ -56,9 +56,12 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
+  function animalNames(array){ 
+    let displayNames = [];
+    zooAnimals.forEach(item => displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`));
+}
+
+  
   
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
@@ -139,7 +142,7 @@ function greeting(/*Your Code Here */){
 /* 🐴🐴🐴 Step 1: Base Constructor 🐴🐴🐴
  Use the constructor function named CuboidMaker to accept properties for length, width, and height which can be initialized as an object
 */
-function CuboidMaker(/*Your Code Here */){
+function CuboidMaker(){
   /*Your Code Here */
 }
 
