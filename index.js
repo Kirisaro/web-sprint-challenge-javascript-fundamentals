@@ -16,7 +16,8 @@ function myFunction() {
 myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
-
+// Answer//
+//The reason that nestedFunction can access const internal is for its positioning inside the Curly braces, it is being nested inside of myFunction so it is given access to its contents. The curly brace starting from line 7 to line 15 is what lets nestedFunction access internal.
 
 
 
@@ -28,11 +29,9 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
+function summation() {
 
-  }
- 
+}
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -56,9 +55,12 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(array){ 
-    let displayNames = [];
-    zooAnimals.forEach(item => displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`));
+  function animalNames(array2){ 
+   let newArray = [];
+   array2.forEach((item, i) =>{
+     newArray.push(`name: ${array2[i].animal_name}, scientific: ${array2[i].scientific_name}`)
+   });
+   return newArray
 }
 
   
@@ -70,8 +72,10 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(array2){
+    let newArray = array2.map(function(item, i){
+      return array2[i].animal_name.toLowerCase()});
+      return newArray;
   }
   
   
@@ -80,8 +84,11 @@ const zooAnimals = [
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowPopulationAnimals(array2){
+    let newArray = array2.filter(function(item, i){
+      return array2[i].population < 5;
+    });
+    return newArray;
   }
   
 
@@ -91,8 +98,11 @@ const zooAnimals = [
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  function USApop(/*Your Code Here*/){
-    /*Your Code Here*/
+  function USApop(array2){
+    let newArray = array2.reduce(function(acc, item){
+      return item.population + acc;
+    })
+    return newArray;
   }
   
   
@@ -104,8 +114,8 @@ const zooAnimals = [
     * The consume function should return the invocation of cb, passing a and b into cb as arguments
   */
 
-  function consume(/*Your Code Here */){
-    /*Your Code Here */
+  function consume(a, b, consumecb){
+    
   }
  
   
