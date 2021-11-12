@@ -30,10 +30,10 @@ myFunction();
     2. Use a counter to return the summation of that number. 
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
-
+// NOTE: 📢 Who ever grades can you leave a note about task 2 and how to solve as I am entirely slumped on how to solve this! Thank you!//
 function summation(number) {
   let count = 0;
-  for(let i = 1; i <= number; i++){
+  for(let i = 4; i <= number; i++){
     count += i;
   }
 }
